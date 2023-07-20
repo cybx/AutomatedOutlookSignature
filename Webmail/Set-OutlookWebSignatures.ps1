@@ -61,8 +61,8 @@ function Create-WebSignatures {
         $state = $user.st # State
         $zipCode = $user.postalcode # Postcode 
         $telephone = $user.telephonenumber # Telephone number
-        $website = "www.example.co.uk" # Website
-        $logo = "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" # Logo
+        $website = "https://www.contabilidadelider.com" # Website
+        $logo = "https://statics.dc01.cybx.dev/imgs/logo_redondo.png" # Logo
 
         # Gathers a list of all groups the user is a member of
         $groups = Get-ADPrincipalGroupMembership $_ | select name
