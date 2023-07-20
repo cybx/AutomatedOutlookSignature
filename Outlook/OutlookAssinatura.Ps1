@@ -236,7 +236,7 @@ $signature =
                     <tr>
                       <td>
                         <p style='margin: 0.04px; margin-left: 10px'>
-                          <span style='font-style: oblique; font-size: small; line-height: 17px; color: #1a1a1a; display: inline; font-weight: bold'>Analista de T.I - Setor T.I</span>
+                          <span style='font-style: oblique; font-size: small; line-height: 17px; color: #1a1a1a; display: inline; font-weight: bold'>" + $(if($jobTitle){$jobTitle}) +" - Setor T.I</span>
                         </p>
                         <p style='margin: 0.04px'>
                           <span style='font-size: 14px; font-style: normal; line-height: 17px; font-weight: bold; color: #074c61; display: inline'>E-mail:</span>
