@@ -44,7 +44,7 @@ if (-not (Test-Path -Path $folderLocation)) {
 # Get the users properties (These should always be in Active Directory and Unique)
 if($user.name.count -gt 0){$displayName = $user.name[0]} # Display Name
 if($user.title.count -gt 0){$jobTitle = $user.title[0]} # Job Title
-if($user.wWWHomePage.count -gt 0){$setormail = $user.wWWHomePage[0]} # Sector Mail
+if($user.description.count -gt 0){$setormail = $user.description[0]} # Sector Mail
 if($user.initials.count -gt 0){$sector = $user.initials[0]} # Sector Name
 # Group Check Example
 #$Group = [ADSI]"LDAP://cn=IT Staff,OU=Groups,DC=Example,DC=co,DC=uk"
