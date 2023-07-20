@@ -81,7 +81,7 @@ if($user.extensionAttribute5.count -gt 0){$attribute5 = $user.extensionAttribute
 #}
 
 # Building Style Sheet
-$style = 
+<#$style = 
 @"
 <style>
 p, table, td, tr, a, span { 
@@ -353,7 +353,7 @@ style='
 "@
 # Save the HTML to the signature file
 try {
-  $style + $signature | Out-File -FilePath "$file.htm" -Encoding ascii
+  $signature | Out-File -FilePath "$file.htm" -Encoding ascii
 } catch {
   Write-Host "Error: Unable to save the HTML signature file. Details: $($_.Exception.Message)"
   exit
