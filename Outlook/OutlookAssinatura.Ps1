@@ -136,6 +136,7 @@ $signature =
     padding: 0px !important;
     border-spacing: 0px;
     margin: 10px;
+    margin-top: 30px;
     border-collapse: collapse;
     width: 600px;
     font-family: Trebuchet MS, Arial, sans-serif;
