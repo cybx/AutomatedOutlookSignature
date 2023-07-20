@@ -350,7 +350,7 @@ $signature =
 </table>"
 
 try {
-  $signature | Out-File -FilePath "$file.htm"
+  $signature | Out-File -FilePath "$file.htm" -Encoding UTF8
 } catch {
   Write-Host "Error: Unable to save the HTML signature file. Details: $($_.Exception.Message)"
   exit
@@ -358,7 +358,7 @@ try {
 
 # Output the text to the signatures folder
 try {
-  $signature | out-file "$file.txt" 
+  $signature | out-file "$file.txt"  -Encoding UTF8
 } catch {
   Write-Host "Error: Unable to save the text signature file. Details: $($_.Exception.Message)"
   exit
