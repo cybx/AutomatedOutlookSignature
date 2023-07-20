@@ -212,7 +212,7 @@ $signature =
                     </tr>
                     <tr>
                       <td>
-                        <p style='margin: 0.04px; margin-left: 10px'>
+                        <p style='margin: 0.04px; margin-left: 5px'>
                           <span style='font-style: oblique; font-size: small; line-height: 17px; color: #1a1a1a; display: inline; font-weight: bold'>" + $(if($jobTitle){$jobTitle}) +" - "+ $(if($sector){$sector})+ "</span>
                         </p>
                         <p style='margin: 0.04px'>
