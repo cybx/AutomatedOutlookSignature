@@ -148,8 +148,7 @@ table.main {
 "@
 #>
 $signature = 
-@"
-<body>
+"
 <table
   id='zs-output-sig'
   cellpadding='0'
@@ -230,7 +229,7 @@ $signature =
                     <tr>
                       <td style='border-collapse: collapse; font-size: 17px; font-style: normal; line-height: 19px; font-weight: 700; padding: 0px !important'>
                         <p style='margin-bottom: 1px'>
-                          <span style='font-size: 25px; font-style: normal; font-weight: 700; color: #b07f47; display: inline'>"+$displayName+"</span>
+                          <span style='font-size: 25px; font-style: normal; font-weight: 700; color: #b07f47; display: inline'>" + $(if($displayName){$displayName} +"
                         </p>
                       </td>
                     </tr>
@@ -348,36 +347,14 @@ $signature =
       </td>
     </tr>
   </tbody>
-</table>
-</body>"@
-# Save the HTML to the signature file
+</table>"
+
 try {
-  $signature | Out-File -FilePath "$file.htm" -Encoding ascii
+  $signature | Out-File -FilePath "$file.htm" -Encoding utf8
 } catch {
   Write-Host "Error: Unable to save the HTML signature file. Details: $($_.Exception.Message)"
   exit
 }
-
-
-# Build the txt version for none rich text emails
-$signature = 
-@"
-$(if($displayName){ $displayName })
-$(if($jobTitle){ $jobTitle })
-___________________________________________________________
-
-$(if($companyName){ $companyName })
-$(if($street){ $street+", " })
-$(if($city){ $city+", " })
-$(if($state){ $state+", " })
-$(if($zipCode){ $zipCode })
-
-$(if($ITMember){"For IT Helpdesk Call 0191231 212313"})
-$(if($telephone){"T: "+$telephone})
-$(if($mobileNumber){"M: "+$mobileNumber})
-$(if($email){"E: "+$email})
-$(if($website){"W: "+$website})
-"@
 
 # Output the text to the signatures folder
 try {
