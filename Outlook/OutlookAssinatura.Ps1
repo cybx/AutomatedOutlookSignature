@@ -44,7 +44,7 @@ if (-not (Test-Path -Path $folderLocation)) {
 # Get the users properties (These should always be in Active Directory and Unique)
 if($user.name.count -gt 0){$displayName = $user.name[0]} # Display Name
 if($user.title.count -gt 0){$jobTitle = $user.title[0]} # Job Title
-if($user.office.count -gt 0){$setormail = $user.office[0]} # Sector Mail
+if($user.wWWHomePage.count -gt 0){$setormail = $user.wWWHomePage[0]} # Sector Mail
 if($user.initials.count -gt 0){$sector = $user.initials[0]} # Sector Name
 # Group Check Example
 #$Group = [ADSI]"LDAP://cn=IT Staff,OU=Groups,DC=Example,DC=co,DC=uk"
@@ -335,7 +335,15 @@ $replacements = @{
   "õ" = "&#xF5;"
   "ç" = "&#xE7;"
 }
-$signature = $signature -replace "([áéíóúãõç])", { $replacements[$_.Value] }
+
+$signature = $signature.Replace("á", $replacements["á"])
+$signature = $signature.Replace("é", $replacements["é"])
+$signature = $signature.Replace("í", $replacements["í"])
+$signature = $signature.Replace("ó", $replacements["ó"])
+$signature = $signature.Replace("ú", $replacements["ú"])
+$signature = $signature.Replace("ã", $replacements["ã"])
+$signature = $signature.Replace("õ", $replacements["õ"])
+$signature = $signature.Replace("ç", $replacements["ç"])
 try {
   $signature | Out-File -FilePath "$file.htm" -Encoding UTF8
 } catch {
