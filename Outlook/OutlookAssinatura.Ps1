@@ -147,9 +147,8 @@ table.main {
 <br />
 "@
 #>
-$signature = "<head>
-<meta charset='UTF-8'>
-</head>
+$signature = 
+@"
 <body>
 <table
   id='zs-output-sig'
@@ -350,7 +349,7 @@ $signature = "<head>
     </tr>
   </tbody>
 </table>
-</body>"
+</body>"@
 # Save the HTML to the signature file
 try {
   $signature | Out-File -FilePath "$file.htm" -Encoding ascii
