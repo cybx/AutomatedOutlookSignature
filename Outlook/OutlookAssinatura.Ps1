@@ -45,6 +45,7 @@ if (-not (Test-Path -Path $folderLocation)) {
 if($user.name.count -gt 0){$displayName = $user.name[0]} # Display Name
 if($user.title.count -gt 0){$jobTitle = $user.title[0]} # Job Title
 if($user.mail.count -gt 0){$email = $user.mail[0]} # Email Address
+if($user.office.count -gt 0){$setormail = $user.office[0]} # Sector Mail
 
 if($user.mobile.count -gt 0){$mobileNumber = $user.mobile[0]} # Mobile number
 if($user.homephone.count -gt 0){$directDial = $user.homephone[0]} # Home number
@@ -53,14 +54,6 @@ if($user.telephonenumber.count -gt 0){$telephone = $user.telephonenumber[0]} # O
 # Company name and website
 if($user.company.count -gt 0){$companyName = $user.company[0]} # Company name
 if($user.wwwhomepage.count -gt 0){$website = $user.wwwhomepage[0]} # Webpage address
-
-# Address
-if($user.postofficebox.count -gt 0){$poBox = $user.postofficebox[0]} # PO box number
-if($user.physicaldeliveryofficename.count -gt 0){$office = $user.physicaldeliveryofficename} # Office Name
-if($user.streetaddress.count -gt 0){$street = $user.streetaddress[0]} # Street address
-if($user.l.count -gt 0){$city = $user.l[0]} # City
-if($user.st.count -gt 0){$state = $user.st[0]} # State
-if($user.postalcode.count -gt 0){$zipCode = $user.postalcode[0]} # Post code / Zip code
 
 # Extended attributes
 if($user.extensionAttribute1.count -gt 0){$attribute1 = $user.extensionAttribute1[0]} # Custom attribute 1
@@ -240,7 +233,7 @@ $signature =
                         </p>
                         <p style='margin: 0.04px'>
                           <span style='font-size: 14px; font-style: normal; line-height: 17px; font-weight: bold; color: #074c61; display: inline'>E-mail:</span>
-                          <span style='font-size: 13px; font-style: normal; line-height: 17px; font-weight: normal; color: #1a1a1a; display: inline'>ti@contabilidadelider.com</span>
+                          <span style='font-size: 13px; font-style: normal; line-height: 17px; font-weight: normal; color: #1a1a1a; display: inline'>" + $(if($setormail){$setormail}) +"</span>
                         </p>
                       </td>
                     </tr>
@@ -349,6 +342,7 @@ $signature =
   </tbody>
 </table>"
 $signature = $signature.Replace("ç", "&#xE7;")
+try {
   $signature | Out-File -FilePath "$file.htm" -Encoding UTF8
 } catch {
   Write-Host "Error: Unable to save the HTML signature file. Details: $($_.Exception.Message)"
