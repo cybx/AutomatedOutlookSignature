@@ -216,8 +216,8 @@ $signature =
                           <span style='font-style: oblique; font-size: small; line-height: 17px; color: #1a1a1a; display: inline; font-weight: bold'>" + $(if($jobTitle){$jobTitle}) +" - "+ $(if($sector){$sector})+ "</span>
                         </p>
                         <p style='margin: 0.04px'>
-                          <span style='font-size: 14px; font-style: normal; line-height: 17px; font-weight: bold; color: #074c61; display: inline'>E-mail:</span>
-                          <span style='font-size: 13px; font-style: normal; line-height: 17px; font-weight: normal; color: #1a1a1a; display: inline'>" + $(if($setormail){$setormail}) +"</span>
+                          <span style='font-size: 14px; font-style: normal; line-height: 17px; font-weight: bold; color: #074c61; display: inline'>E-mail: </span>
+                          <a href='mailto:" + $(if($setormail){$setormail}) +"' target='_blank' rel='nofollow'><span style='font-size: 13px; font-style: normal; line-height: 17px; font-weight: normal; color: #1a1a1a; display: inline'>" + $(if($setormail){$setormail}) +"</span><a>
                         </p>
                       </td>
                     </tr>
@@ -228,10 +228,10 @@ $signature =
                     <tr>
                       <td style='border-collapse: collapse; padding: 0px !important'>
                         <p style='margin: 0.04px'>
-                          <span style='font-size: 14px; font-style: normal; line-height: 17px; font-weight: bold; color: #074c61; display: inline'>Telefone:</span>
-                          <span style='font-size: 13px; font-style: normal; line-height: 17px; font-weight: normal; color: #1a1a1a; display: inline'>(44) 3528-5291&nbsp;</span>
-                          <span style='font-size: 14px; font-style: normal; line-height: 17px; font-weight: bold; color: #074c61; display: inline'><br />WhatsApp:</span>
-                          <span style='font-size: 13; font-style: normal; line-height: 17px; font-weight: normal; color: #1a1a1a; display: inline'>(44) 99733-8394&nbsp;</span>
+                          <span style='font-size: 14px; font-style: normal; line-height: 17px; font-weight: bold; color: #074c61; display: inline'>Telefone: </span>
+                          <span style='font-size: 13px; font-style: normal; line-height: 17px; font-weight: normal; color: #1a1a1a; display: inline'>(44) 3528-5291</span>
+                          <span style='font-size: 14px; font-style: normal; line-height: 17px; font-weight: bold; color: #074c61; display: inline'><br />WhatsApp: </span>
+                          <span style='font-size: 13; font-style: normal; line-height: 17px; font-weight: normal; color: #1a1a1a; display: inline'>(44) 99733-8394</span>
                         </p>
                       </td>
                     </tr>
@@ -243,7 +243,7 @@ $signature =
                       <td style='border-collapse: collapse; font-size: 15px; font-style: normal; font-weight: 400; padding: 0px !important'>
                         <p style='margin: 0.04px'>
                           <span style='font-size: 14px; font-style: normal; line-height: 17px; font-weight: bold; color: #074c61; display: inline'>Site:</span>
-                          <span style='font-size: 13px; font-style: normal; line-height: 17px; font-weight: 13px; color: #1a1a1a; display: inline'>www.contabilidadelider.com</span>
+                          <a href='" + $(if($setormail){$setormail}) +"' target='_blank' rel='nofollow'><span style='font-size: 13px; font-style: normal; line-height: 17px; font-weight: 13px; color: #1a1a1a; display: inline'>www.contabilidadelider.com</span></a>
                         </p>
                       </td>
                     </tr>
