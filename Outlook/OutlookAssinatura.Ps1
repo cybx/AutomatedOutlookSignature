@@ -348,8 +348,7 @@ $signature =
     </tr>
   </tbody>
 </table>"
-
-try {
+$signature = $signature.Replace("ç", "&#xE7;")
   $signature | Out-File -FilePath "$file.htm" -Encoding UTF8
 } catch {
   Write-Host "Error: Unable to save the HTML signature file. Details: $($_.Exception.Message)"
