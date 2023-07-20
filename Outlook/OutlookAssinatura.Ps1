@@ -277,46 +277,46 @@ $signature =
                   </tbody>
                 </table>
                 <table border='0' cellpadding='0' cellspacing='0' style='line-height: 0px; font-size: 1px; padding: 0px !important; border-spacing: 0px; margin: 0px; border-collapse: collapse'>
-                  <tbody>
-                    <tr>
-                      <td style='padding-right: 10px'>
-                        <p style='margin: 0.04px'>
-                          <a style='font-size: 0px; line-height: 0px' target='_blank' rel='nofollow' href='http://[WHATSAPP]'
-                            ><img height='24' width='24' alt='whatsapp' border='0' src='https://statics.dc01.cybx.dev/lider/signature/whatsapp.png'
-                          /></a>
-                        </p>
-                      </td>
-                      <td style='padding-right: 10px'>
-                        <p style='margin: 0.04px'>
-                          <a style='font-size: 0px; line-height: 0px' target='_blank' rel='nofollow' href='http://[GOOGLEMAPS]'
-                            ><img height='24' width='24' alt='map' border='0' src='https://statics.dc01.cybx.dev/lider/signature/map.png'
-                          /></a>
-                        </p>
-                      </td>
-                      <td style='padding-right: 10px'>
-                        <p style='margin: 0.04px'>
-                          <a style='font-size: 0px; line-height: 0px' target='_blank' rel='nofollow' href='http://[INSTAGRAM]'
-                            ><img height='24' width='24' alt='instagram' border='0' src='https://statics.dc01.cybx.dev/lider/signature/instagram.png'
-                          /></a>
-                        </p>
-                      </td>
-                      <td style='padding-right: 10px'>
-                        <p style='margin: 0.04px'>
-                          <a style='font-size: 0px; line-height: 0px' target='_blank' rel='nofollow' href='http://[YOUTUBE]'
-                            ><img height='24' width='24' alt='instagram' border='0' src='https://statics.dc01.cybx.dev/lider/signature/youtube.png'
-                          /></a>
-                        </p>
-                      </td>
-                      <td style='padding-right: 10px'>
-                        <p style='margin: 0.04px'>
-                          <a style='font-size: 0px; line-height: 0px' target='_blank' rel='nofollow' href='http://[FACEBOOK]'
-                            ><img height='24' width='24' alt='facebook' border='0' src='https://statics.dc01.cybx.dev/lider/signature/facebook.png'
-                          /></a>
-                        </p>
-                      </td>
-                      <td style='padding: 0px !important'></td>
-                    </tr>
-                  </tbody>
+                <tbody>
+                <tr>
+                  <td style='padding-right: 10px'>
+                    <p style='margin: 0.04px'>
+                      <a style='font-size: 0px; line-height: 0px' target='_blank' rel='nofollow' href='https://wa.me/+5544997338394?text=Menu'
+                        ><img height='24' width='24' alt='whatsapp' border='0' src='https://statics.dc01.cybx.dev/lider/signature/whatsapp.png'
+                      /></a>
+                    </p>
+                  </td>
+                  <td style='padding-right: 10px'>
+                    <p style='margin: 0.04px'>
+                      <a style='font-size: 0px; line-height: 0px' target='_blank' rel='nofollow' href='https://goo.gl/maps/QE9hADdec5HVe3Ff7'
+                        ><img height='24' width='24' alt='map' border='0' src='https://statics.dc01.cybx.dev/lider/signature/map.png'
+                      /></a>
+                    </p>
+                  </td>
+                  <td style='padding-right: 10px'>
+                    <p style='margin: 0.04px'>
+                      <a style='font-size: 0px; line-height: 0px' target='_blank' rel='nofollow' href='https://www.instagram.com/escritorio.lider/'
+                        ><img height='24' width='24' alt='instagram' border='0' src='https://statics.dc01.cybx.dev/lider/signature/instagram.png'
+                      /></a>
+                    </p>
+                  </td>
+                  <td style='padding-right: 10px'>
+                    <p style='margin: 0.04px'>
+                      <a style='font-size: 0px; line-height: 0px' target='_blank' rel='nofollow' href='https://www.youtube.com/@contabilidadelider'
+                        ><img height='24' width='24' alt='instagram' border='0' src='https://statics.dc01.cybx.dev/lider/signature/youtube.png'
+                      /></a>
+                    </p>
+                  </td>
+                  <td style='padding-right: 10px'>
+                    <p style='margin: 0.04px'>
+                      <a style='font-size: 0px; line-height: 0px' target='_blank' rel='nofollow' href='https://fb.me/contabilidadelidercom'
+                        ><img height='24' width='24' alt='facebook' border='0' src='https://statics.dc01.cybx.dev/lider/signature/facebook.png'
+                      /></a>
+                    </p>
+                  </td>
+                  <td style='padding: 0px !important'></td>
+                </tr>
+              </tbody>
                 </table>
               </td>
             </tr>
