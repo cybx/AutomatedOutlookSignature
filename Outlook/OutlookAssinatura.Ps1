@@ -1,23 +1,3 @@
-<#
-.SYNOPSIS
-  Dynamic Outlook Signature Creation - https://github.com/captainqwerty/AutomatedOutlookSignature
-.DESCRIPTION
-  This script uses properties from ActiveDirectory to populate the .htm and .txt file which are then stored in the $folderlocation with the name $filename.htm and $filename.txt. 
-  The script can be ran as either a scheduled task at logon or preferably a Group Policy Logon script, more details on this can be found in the GitHub ReadMe.
-  The script uses if statements to ensure if a user, for example, doesn't have a mobile number then that entire section of the signature is not uncluded, this makes the signature look much more professional and 
-  if the user is given a mobile number, at next logon it will be added to their signature. 
-  The script can also add additional parts based on group membership, the example given in this script is being a member of IT Staff adds Helpdesk contact information. 
-.INPUTS
-  Several properties for the user are taken directly from Active Directory, for more details on this please see the ReadMe on GitHub.
-.OUTPUTS
-  $folderlocation\$filename.htm - HTML signature for rich text emails
-  $folderlocation\$filename.txt - Text signautre for none rich text emails
-.NOTES
-  Version:        4.0
-  Author:         CaptainQwerty
-  Modified:       24/04/2023
-#>
-
 # Attempt to get the user from Active Directory, if no user is found or there is an issue the script will exit
 try {
   $user = (([adsisearcher]"(&(objectCategory=User)(samaccountname=$env:username))").FindOne().Properties)
@@ -41,91 +21,13 @@ if (-not (Test-Path -Path $folderLocation)) {
   }
 }
 
-# Get the users properties (These should always be in Active Directory and Unique)
 if($user.name.count -gt 0){$displayName = $user.name[0]} # Display Name
 if($user.title.count -gt 0){$jobTitle = $user.title[0]} # Job Title
 if($user.description.count -gt 0){$setormail = $user.description[0]} # Sector Mail
 if($user.initials.count -gt 0){$sector = $user.initials[0]} # Sector Name
-# Group Check Example
-#$Group = [ADSI]"LDAP://cn=IT Staff,OU=Groups,DC=Example,DC=co,DC=uk"
-#$Group.Member | ForEach-Object {
-#if ($user.distinguishedname -match $_) {
-#      $ItStaff = $true
-#    }
-#}
-
-# Building Style Sheet
-<#$style = 
-@"
-<style>
-p, table, td, tr, a, span { 
-    font-family: Arial, Helvetica, sans-serif;
-    font-size:  12pt;
-    color: #28b8ce;
-}
-
-span.blue
-{
-    color: #28b8ce;
-}
-
-table {
-    margin: 0;
-    padding: 0;
-}
-
-a { 
-text-decoration: none;
-}
-
-hr {
-border: none;
-height: 1px;
-background-color: #28b8ce;
-color: #28b8ce;
-width: 700px;
-}
-
-table.main {
-    border-top: 1px solid #28b8ce;
-}
-</style>
-"@
-
-# Building HTML
-<#$signature = 
-@"
-  $(if($displayName){"<span><b>"+$displayName+"</b></span><br />"})
-  $(if($jobTitle){"<span>"+$jobTitle+"</span><br /><br />"})
-
-<p>
-  <table class='main'>
-      <tr>
-          <td style='padding-right: 75px;'>$(if($logo){"<img src='$logo' />"})</td>
-          <td>
-              <table>
-                  <tr><td colspan='2' style='padding-bottom: 10px;'>
-                    $(if($companyName){ "<b>"+$companyName+"</b><br />" })
-                    $(if($street){ $street+", " })
-                    $(if($city){ $city+", " })
-                    $(if($state){ $state+", " })
-                    $(if($zipCode){ $zipCode })
-                  </td></tr>
-                  $(if($ITMember){"<tr><td td colspan='2'>IT Helpdesk: 0188887 55555 6666</tr></td>"})
-                  $(if($telephone){"<tr><td>T: </td><td><a href='tel:$telephone'>$($telephone)</a></td></tr>"})
-                  $(if($mobileNumber){"<tr><td>M: </td><td><a href='tel:$mobileNumber'>$($mobileNumber)</a></td></tr>"})
-                  $(if($email){"<tr><td>E: </td><td><a href='mailto:$email'>$($email)</a></td></tr>"})
-                  $(if($website){"<tr><td>W:</td><td><a href='https://$website'>$($website)</a></td></tr>"})
-              </table>
-          </td>
-      </tr>
-  </table>
-</p>
-<br />
-"@
-#>
 $signature = 
-"
+"<br><br>
+<span>Atenciosamente,</span><br>
 <table
   id='zs-output-sig'
   cellpadding='0'
@@ -136,7 +38,6 @@ $signature =
     padding: 0px !important;
     border-spacing: 0px;
     margin: 10px;
-    margin-top: 30px;
     border-collapse: collapse;
     width: 600px;
     font-family: Trebuchet MS, Arial, sans-serif;
@@ -218,7 +119,7 @@ $signature =
                         </p>
                         <p style='margin: 0.04px'>
                           <span style='font-size: 14px; font-style: normal; line-height: 17px; font-weight: bold; color: #074c61; display: inline'>E-mail: </span>
-                          <a style='text-decoration: none;'href='mailto:" + $(if($setormail){$setormail}) +"' target='_blank' rel='nofollow'><span style='font-size: 13px; font-style: normal; line-height: 17px; font-weight: 13px; color: #1a1a1a; display: inline'>" + $(if($setormail){$setormail}) +"</span><a></>
+                          <a style='text-decoration:none !important; text-decoration:none;' href='mailto:" + $(if($setormail){$setormail}) +"' target='_blank' rel='nofollow'><span style='font-size: 13px; font-style: normal; line-height: 17px; font-weight: 13px; color: #1a1a1a; display: inline'>" + $(if($setormail){$setormail}) +"</span><a></>
                       </td>
                     </tr>
                   </tbody>
@@ -229,9 +130,9 @@ $signature =
                       <td style='border-collapse: collapse; padding: 0px !important'>
                         <p style='margin: 0.04px'>
                           <span style='font-size: 14px; font-style: normal; line-height: 17px; font-weight: bold; color: #074c61; display: inline'>Telefone: </span>
-                          <a href='tel:044-3528-5291' style='text-decoration: none'><span style='font-size: 13px; font-style: normal; line-height: 17px; font-weight: normal; color: #1a1a1a; display: inline'>(44) 3528-5291</span></a>
+                          <a href='tel:044-3528-5291' style='text-decoration:none !important; text-decoration:none;' ><span style='font-size: 13px; font-style: normal; line-height: 17px; font-weight: normal; color: #1a1a1a; display: inline'>(44) 3528-5291</span></a>
                           <span style='font-size: 14px; font-style: normal; line-height: 17px; font-weight: bold; color: #074c61; display: inline'><br />WhatsApp: </span>
-                          <span style='font-size: 13; font-style: normal; line-height: 17px; font-weight: normal; color: #1a1a1a; display: inline'>(44) 99733-8394</span>
+                          <a href='https://wa.me/+5544997338394?text=Menu' style='text-decoration:none !important; text-decoration:none;' ><span style='font-size: 13; font-style: normal; line-height: 17px; font-weight: normal; color: #1a1a1a; display: inline'>(44) 99733-8394</span></a>
                         </p>
                       </td>
                     </tr>
@@ -243,7 +144,7 @@ $signature =
                       <td style='border-collapse: collapse; font-size: 15px; font-style: normal; font-weight: 400; padding: 0px !important'>
                         <p style='margin: 0.04px'>
                           <span style='font-size: 14px; font-style: normal; line-height: 17px; font-weight: bold; color: #074c61; display: inline'>Site:</span>
-                          <a style='text-decoration: none;' href='" + $(if($setormail){$setormail}) +"' target='_blank' rel='nofollow'><span style='font-size: 13px; font-style: normal; line-height: 17px; font-weight: 13px; color: #1a1a1a; display: inline'>www.contabilidadelider.com</span></a>
+                          <a style='text-decoration:none !important; text-decoration:none;'  href='" + $(if($setormail){$setormail}) +"' target='_blank' rel='nofollow'><span style='font-size: 13px; font-style: normal; line-height: 17px; font-weight: 13px; color: #1a1a1a; display: inline'>www.contabilidadelider.com</span></a>
                         </p>
                       </td>
                     </tr>
@@ -251,10 +152,11 @@ $signature =
                       <td style='border-collapse: collapse; font-size: 15px; font-style: normal; font-weight: 400; padding-bottom: 14px'>
                         <p style='margin: 0.04px'>
                           <span style='font-size: 14px; font-style: normal; line-height: 17px; font-weight: bold; color: #074c61; display: inline'>Endereço:</span>
-                          <span style='font-size: 13px; font-style: normal; line-height: 17px; font-weight: normal; color: #1a1a1a; display: inline'
+                          <a href='https://goo.gl/maps/QE9hADdec5HVe3Ff7' style='text-decoration:none !important; text-decoration:none;' > <span style='font-size: 13px; font-style: normal; line-height: 17px; font-weight: normal; color: #1a1a1a; display: inline'
                             >Av. Don Pedro II, 207, Centro<br />
                             Assis Chateaubriand - PR</span
-                          >
+                          ></a>
+                          
                         </p>
                       </td>
                     </tr>
@@ -335,7 +237,7 @@ $replacements = @{
   "õ" = "&#xF5;"
   "ç" = "&#xE7;"
 }
-
+#replace utf8 problems in powershell accents.
 $signature = $signature.Replace("á", $replacements["á"])
 $signature = $signature.Replace("é", $replacements["é"])
 $signature = $signature.Replace("í", $replacements["í"])
