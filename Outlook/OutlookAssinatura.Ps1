@@ -44,24 +44,8 @@ if (-not (Test-Path -Path $folderLocation)) {
 # Get the users properties (These should always be in Active Directory and Unique)
 if($user.name.count -gt 0){$displayName = $user.name[0]} # Display Name
 if($user.title.count -gt 0){$jobTitle = $user.title[0]} # Job Title
-if($user.mail.count -gt 0){$email = $user.mail[0]} # Email Address
 if($user.office.count -gt 0){$setormail = $user.office[0]} # Sector Mail
-
-if($user.mobile.count -gt 0){$mobileNumber = $user.mobile[0]} # Mobile number
-if($user.homephone.count -gt 0){$directDial = $user.homephone[0]} # Home number
-if($user.telephonenumber.count -gt 0){$telephone = $user.telephonenumber[0]} # Office number
-
-# Company name and website
-if($user.company.count -gt 0){$companyName = $user.company[0]} # Company name
-if($user.wwwhomepage.count -gt 0){$website = $user.wwwhomepage[0]} # Webpage address
-
-# Extended attributes
-if($user.extensionAttribute1.count -gt 0){$attribute1 = $user.extensionAttribute1[0]} # Custom attribute 1
-if($user.extensionAttribute2.count -gt 0){$attribute2 = $user.extensionAttribute2[0]} # Custom attribute 2
-if($user.extensionAttribute3.count -gt 0){$attribute3 = $user.extensionAttribute3[0]} # Custom attribute 3
-if($user.extensionAttribute4.count -gt 0){$attribute4 = $user.extensionAttribute4[0]} # Custom attribute 4
-if($user.extensionAttribute5.count -gt 0){$attribute5 = $user.extensionAttribute5[0]} # Custom attribute 5
-
+if($user.initials.count -gt 0){$sector = $user.initials[0]} # Sector Name
 # Group Check Example
 #$Group = [ADSI]"LDAP://cn=IT Staff,OU=Groups,DC=Example,DC=co,DC=uk"
 #$Group.Member | ForEach-Object {
@@ -229,7 +213,7 @@ $signature =
                     <tr>
                       <td>
                         <p style='margin: 0.04px; margin-left: 10px'>
-                          <span style='font-style: oblique; font-size: small; line-height: 17px; color: #1a1a1a; display: inline; font-weight: bold'>" + $(if($jobTitle){$jobTitle}) +" - Setor T.I</span>
+                          <span style='font-style: oblique; font-size: small; line-height: 17px; color: #1a1a1a; display: inline; font-weight: bold'>" + $(if($jobTitle){$jobTitle}) +" - "+ $(if($sector){$sector})+ "</span>
                         </p>
                         <p style='margin: 0.04px'>
                           <span style='font-size: 14px; font-style: normal; line-height: 17px; font-weight: bold; color: #074c61; display: inline'>E-mail:</span>
