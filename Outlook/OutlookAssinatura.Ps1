@@ -28,8 +28,6 @@ if($user.initials.count -gt 0){$sector = $user.initials[0]} # Sector Name
 $signature = 
 "<br><br>
 <span>Atenciosamente,</span><br>
-<div style='background-color: #CCCCCC; bottom: 4px;position: relative;right: 4px;'>
-
 <table
   id='zs-output-sig'
   cellpadding='0'
@@ -58,8 +56,7 @@ $signature =
           border='0'
           cellpadding='0'
           cellspacing='0'
-          background-color:
-          #FFFFFF;
+          background-color: #ffffff;
           style='line-height: 0px; font-size: 1px; padding: 0px !important; border-spacing: 0px; margin: 0px; border-collapse: collapse'>
           <tbody>
             <tr>
@@ -233,8 +230,7 @@ $signature =
       </td>
     </tr>
   </tbody>
-</table>
-</div>"
+</table>"
 $replacements = @{
   "á" = "&#xE1;"
   "é" = "&#xE9;"
