@@ -341,7 +341,17 @@ $signature =
     </tr>
   </tbody>
 </table>"
-$signature = $signature.Replace("ç", "&#xE7;")
+$replacements = @{
+  "á" = "&#xE1;"
+  "é" = "&#xE9;"
+  "í" = "&#xED;"
+  "ó" = "&#xF3;"
+  "ú" = "&#xFA;"
+  "ã" = "&#xE3;"
+  "õ" = "&#xF5;"
+  "ç" = "&#xE7;"
+}
+$signature = $signature -replace "([áéíóúãõç])", { $replacements[$_.Value] }
 try {
   $signature | Out-File -FilePath "$file.htm" -Encoding UTF8
 } catch {
