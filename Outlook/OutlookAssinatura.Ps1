@@ -218,8 +218,7 @@ $signature =
                         </p>
                         <p style='margin: 0.04px'>
                           <span style='font-size: 14px; font-style: normal; line-height: 17px; font-weight: bold; color: #074c61; display: inline'>E-mail: </span>
-                          <a href='mailto:" + $(if($setormail){$setormail}) +"' target='_blank' rel='nofollow'><span style='font-size: 13px; font-style: normal; line-height: 17px; font-weight: normal; color: #1a1a1a; display: inline'>" + $(if($setormail){$setormail}) +"</span><a>
-                        </p>
+                          <a href='mailto:" + $(if($setormail){$setormail}) +"' target='_blank' rel='nofollow'><span style='font-size: 13px; font-style: normal; line-height: 17px; font-weight: 13px; color: #1a1a1a; display: inline'>" + $(if($setormail){$setormail}) +"</span><a></>
                       </td>
                     </tr>
                   </tbody>
