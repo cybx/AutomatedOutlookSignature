@@ -41,9 +41,6 @@ if (-not (Test-Path -Path $folderLocation)) {
   }
 }
 
-# Logo to be used - if different users need different logos you could consider using their extenstionAttributes or another property in Active Directory to store the URL for their logo.
-$logo = 'https://statics.dc01.cybx.dev/imgs/logo_redondo.png' # Please note that if you do include a logo it must be located somewhere on the internet that the public has access to, many users upload it to their website.
-
 # Get the users properties (These should always be in Active Directory and Unique)
 if($user.name.count -gt 0){$displayName = $user.name[0]} # Display Name
 if($user.title.count -gt 0){$jobTitle = $user.title[0]} # Job Title
@@ -151,6 +148,9 @@ table.main {
 "@
 #>
 $signature = @"
+<head>
+  <meta charset='UTF-8'>
+  </head>
 <table
 id='zs-output-sig'
 cellpadding='0'
