@@ -130,7 +130,7 @@ $signature =
                       <td style='border-collapse: collapse; padding: 0px !important'>
                         <p style='margin: 0.04px'>
                           <span style='font-size: 14px; font-style: normal; line-height: 17px; font-weight: bold; color: #074c61; display: inline'>Telefone: </span>
-                          <a href='tel:044-3528-5291' style='text-decoration:none !important; text-decoration:none;' ><span style='font-size: 13px; font-style: normal; line-height: 17px; font-weight: normal; color: #1a1a1a; display: inline'>(44) 3528-5291</span></a>
+                          <a href='tel:044-3528-5291' style='text-decoration:none !important; text-decoration:none;' class='external'><span style='font-size: 13px; font-style: normal; line-height: 17px; font-weight: normal; color: #1a1a1a; display: inline'>(44) 3528-5291</span></a>
                           <span style='font-size: 14px; font-style: normal; line-height: 17px; font-weight: bold; color: #074c61; display: inline'><br />WhatsApp: </span>
                           <a href='https://wa.me/+5544997338394?text=Menu' style='text-decoration:none !important; text-decoration:none;' ><span style='font-size: 13; font-style: normal; line-height: 17px; font-weight: normal; color: #1a1a1a; display: inline'>(44) 99733-8394</span></a>
                         </p>
@@ -156,7 +156,7 @@ $signature =
                             >Av. Don Pedro II, 207, Centro<br />
                             Assis Chateaubriand - PR</span
                           ></a>
-                          
+
                         </p>
                       </td>
                     </tr>
