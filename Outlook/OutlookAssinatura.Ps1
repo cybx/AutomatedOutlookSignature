@@ -218,7 +218,7 @@ $signature =
                         </p>
                         <p style='margin: 0.04px'>
                           <span style='font-size: 14px; font-style: normal; line-height: 17px; font-weight: bold; color: #074c61; display: inline'>E-mail: </span>
-                          <a href='mailto:" + $(if($setormail){$setormail}) +"' target='_blank' rel='nofollow'><span style='font-size: 13px; font-style: normal; line-height: 17px; font-weight: 13px; color: #1a1a1a; display: inline'>" + $(if($setormail){$setormail}) +"</span><a></>
+                          <a style='text-decoration: none;'href='mailto:" + $(if($setormail){$setormail}) +"' target='_blank' rel='nofollow'><span style='font-size: 13px; font-style: normal; line-height: 17px; font-weight: 13px; color: #1a1a1a; display: inline'>" + $(if($setormail){$setormail}) +"</span><a></>
                       </td>
                     </tr>
                   </tbody>
@@ -243,7 +243,7 @@ $signature =
                       <td style='border-collapse: collapse; font-size: 15px; font-style: normal; font-weight: 400; padding: 0px !important'>
                         <p style='margin: 0.04px'>
                           <span style='font-size: 14px; font-style: normal; line-height: 17px; font-weight: bold; color: #074c61; display: inline'>Site:</span>
-                          <a href='" + $(if($setormail){$setormail}) +"' target='_blank' rel='nofollow'><span style='font-size: 13px; font-style: normal; line-height: 17px; font-weight: 13px; color: #1a1a1a; display: inline'>www.contabilidadelider.com</span></a>
+                          <a style='text-decoration: none;' href='" + $(if($setormail){$setormail}) +"' target='_blank' rel='nofollow'><span style='font-size: 13px; font-style: normal; line-height: 17px; font-weight: 13px; color: #1a1a1a; display: inline'>www.contabilidadelider.com</span></a>
                         </p>
                       </td>
                     </tr>
