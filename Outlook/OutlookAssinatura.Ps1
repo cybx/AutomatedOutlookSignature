@@ -231,7 +231,7 @@ $signature = "<head>
                     <tr>
                       <td style='border-collapse: collapse; font-size: 17px; font-style: normal; line-height: 19px; font-weight: 700; padding: 0px !important'>
                         <p style='margin-bottom: 1px'>
-                          <span style='font-size: 25px; font-style: normal; font-weight: 700; color: #b07f47; display: inline'>Victor Barbieri</span>
+                          <span style='font-size: 25px; font-style: normal; font-weight: 700; color: #b07f47; display: inline'>"+$displayName+"</span>
                         </p>
                       </td>
                     </tr>
