@@ -223,7 +223,7 @@ $signature =
                     </tr>
                   </tbody>
                 </table>
-                <table border='0' cellpadding='0' cellspacing='0' style='font-size: 1px; padding: 0px !important; border-spacing: 0px; margin: 0px; border-collapse: collapse'>
+                <table border='0' cellpadding='0' cellspacing='0' style='font-size: 1px; padding: 0px !important; border-spacing: 0px; margin: 0px; border-collapse: collapse; background-color: white'>
                   <tbody>
                     <tr>
                       <td style='border-collapse: collapse; padding: 0px !important'>
