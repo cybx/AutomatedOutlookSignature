@@ -34,7 +34,7 @@ $signature =
   cellspacing='0'
   style='
   background-color: #FFFFFF;
-  border: 1px solid #000000;
+  border: 1px solid #88A5BF80;
   color: #000000;
   padding: 0.5em;
   bottom: 4px;position: relative;right: 4px;
@@ -222,38 +222,15 @@ $signature =
     <tr>
       <td style='border-collapse: collapse'>
         <p style='margin: 5px; font-size: 10px; font-style: normal; line-height: 10px; font-weight: normal; color: #777777'>
-          O conteúdo deste e-mail é confidencial e destinado exclusivamente ao destinatário especificado apenas na mensagem. É estritamente proibido compartilhar qualquer parte desta mensagem com
-          terceiros, sem o consentimento por escrito do remetente. Se você recebeu esta mensagem por engano, responda a esta mensagem e siga com sua exclusão, para que possamos garantir que tal erro
-          não ocorra no futuro.<br />
+            O conte&uacute;do deste e-mail &eacute; confidencial e destinado exclusivamente ao destinat&aacute;rio especificado apenas na mensagem. &Eacute; estritamente proibido compartilhar qualquer parte desta mensagem com
+        terceiros, sem o consentimento por escrito do remetente. Se voc&ecirc; recebeu esta mensagem por engano, responda a esta mensagem e siga com sua exclus&atilde;o, para que possamos garantir que tal erro
+        n&atilde;o ocorra no futuro.<br />
           <p style='margin: 5px; font-size: 13px; text-align: center; font-style: normal; line-height: 14px; font-weight: normal; color: red'>Antes de imprimir pense no verde, apesar desta mensagem estar em vermelho e sua impressora ser preta e branca</p>
         </p>
       </td>
     </tr>
   </tbody>
 </table>"
-$replacements = @{
-  "á" = "&#xE1;"
-  "é" = "&#xE9;"
-  "É" = "&#xC9;"
-  "í" = "&#xED;"
-  "ó" = "&#xF3;"
-  "ú" = "&#xFA;"
-  "ã" = "&#xE3;"
-  "õ" = "&#xF5;"
-  "ç" = "&#xE7;"
-  "ê" = "&#xEA;"
-}
-
-$signature = $signature.Replace("á", $replacements["á"])
-$signature = $signature.Replace("é", $replacements["é"])
-$signature = $signature.Replace("É", $replacements["É"])
-$signature = $signature.Replace("í", $replacements["í"])
-$signature = $signature.Replace("ó", $replacements["ó"])
-$signature = $signature.Replace("ú", $replacements["ú"])
-$signature = $signature.Replace("ã", $replacements["ã"])
-$signature = $signature.Replace("õ", $replacements["õ"])
-$signature = $signature.Replace("ç", $replacements["ç"])
-$signature = $signature.Replace("ê", $replacements["ê"])
 try {
   $signature | Out-File -FilePath "$file.htm" -Encoding UTF8
 } catch {
