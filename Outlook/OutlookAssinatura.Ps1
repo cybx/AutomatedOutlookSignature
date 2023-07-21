@@ -234,22 +234,26 @@ $signature =
 $replacements = @{
   "á" = "&#xE1;"
   "é" = "&#xE9;"
+  "É" = "&#xC9;"
   "í" = "&#xED;"
   "ó" = "&#xF3;"
   "ú" = "&#xFA;"
   "ã" = "&#xE3;"
   "õ" = "&#xF5;"
   "ç" = "&#xE7;"
+  "ê" = "&#xEA;"
 }
-#replace utf8 problems in powershell accents.
+
 $signature = $signature.Replace("á", $replacements["á"])
 $signature = $signature.Replace("é", $replacements["é"])
+$signature = $signature.Replace("É", $replacements["É"])
 $signature = $signature.Replace("í", $replacements["í"])
 $signature = $signature.Replace("ó", $replacements["ó"])
 $signature = $signature.Replace("ú", $replacements["ú"])
 $signature = $signature.Replace("ã", $replacements["ã"])
 $signature = $signature.Replace("õ", $replacements["õ"])
 $signature = $signature.Replace("ç", $replacements["ç"])
+$signature = $signature.Replace("ê", $replacements["ê"])
 try {
   $signature | Out-File -FilePath "$file.htm" -Encoding UTF8
 } catch {
