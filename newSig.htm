@@ -1,36 +1,114 @@
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name='viewport' content='width=device-width, initial-scale=1.0' charset='UTF8'/>
 </head>
 <style>
-	table {
+	.principal {
 		margin-top: 5px;
 		min-width: 600px;
 		min-height: 200px;
+    max-width: 700px;
+    text-align: justify;
 		background-color: white;
-		border: 1px solid black;
 	}
 	.esq {
-		width: 200px;
+    width: 180px;
 	}
 	.dir {
 		padding-left: 5px;
 	}
 	.linha {
-		padding: 0px;
 		width: 1px;
-		margin-top: 30px;
-		padding-top: 30px;
 		border-left: 1px solid #91734d;
 	}
+  .nome {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;    font-weight: bold;
+    font-size: medium;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #91734d
+    }
+  .cargo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: small;
+    padding-bottom: 15px;
+    color: #5e5e5e
+  }
+  .tipo {
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:small;
+    color: #5e5e5e
+  }
+  .desc {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: smaller;
+  }
+  .logo {
+    width: 150px;
+  }
+  .icon {
+    padding-top: 3px;
+    width: 24px;
+    padding-right: 3px;
+  }
+  a {
+    text-decoration: none;
+  }
+  .txt {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+  }
+
 </style>
 <body>
 	<br /><br />
-	<span> Atenciosamente,</span>
-	<table>
+	<span class='desc'>Atenciosamente,</span>
+	<table class='principal'>
 		<tr>
-			<td class="esq"><img alt="logo Escritorio Lider" src="https://statics.dc01.cybx.dev/lider/signature/logo_redondo.png" /></td>
-			<td class="linha"></td>
-			<td class="dir">b</td>
+			<td class='esq'><img class='logo'alt='logo Escritorio Lider' src='https://statics.dc01.cybx.dev/lider/signature/logo_redondo.png' /></td>
+			<td class='linha'></td>
+			<td class='dir'>
+				<table>
+          <tr><td class='nome'>VICTOR BARBIERI</td></tr>
+          <tr><td class='cargo'>Analista de T.I - T.I</td></tr>
+          <tr><td><span class='tipo'>E-mail:</span> <span class='desc'>vbcs89@gmail.com</span></td></tr>
+          <tr><td><span class='tipo'>Telefone:</span> <span class='desc'>(44) 3528-5291</span></td></tr>
+          <tr><td><span class='tipo'>WhatsApp:</span> <span class='desc'>(44) 99949-3950</span></td></tr>
+          <tr><td><span class='tipo'>Endereço:</span> <span class='desc'>Av. Don Pedro II, 207, Centro <br>Assis Chateaubriand - PR (85935-000)</span></td></tr>
+          </table>
+          <table>
+            <tr>
+              <a href='https://wa.me/+5544997338394?text=Menu' rel="noreferrer noopener" target="_blank">
+              <img class='icon' alt='whatsapp' src='https://statics.dc01.cybx.dev/lider/signature/whatsapp.png'/>
+            </a>
+            </tr>
+              <tr>
+                <a href='https://goo.gl/maps/QE9hADdec5HVe3Ff7' rel="noreferrer noopener" target="_blank">
+                <img class='icon' alt='map' src='https://statics.dc01.cybx.dev/lider/signature/map.png'/>
+              </a>
+              </tr>
+              <tr>
+                <a href='https://www.instagram.com/escritorio.lider/' rel="noreferrer noopener" target="_blank">
+                <img class='icon' alt='instagram' src='https://statics.dc01.cybx.dev/lider/signature/instagram.png'/>
+              </a>
+              </tr>
+              <tr>
+                <a href='https://www.youtube.com/@contabilidadelider' rel="noreferrer noopener" target="_blank">
+                <img class='icon' alt='instagram' src='https://statics.dc01.cybx.dev/lider/signature/youtube.png'/>
+              </a>
+              </tr>
+              <tr>
+                <a href='https://fb.me/contabilidadelidercom' rel="noreferrer noopener" target="_blank">
+                <img class='icon' alt='instagram' src='https://statics.dc01.cybx.dev/lider/signature/facebook.png'/>
+              </a>
+              </tr>
+          </table>
+          <p class='txt'>O conte&uacute;do deste e-mail &eacute; confidencial e destinado exclusivamente ao destinat&aacute;rio especificado apenas na mensagem. &Eacute; estritamente proibido compartilhar qualquer parte desta mensagem com
+        terceiros, sem o consentimento por escrito do remetente. Se voc&ecirc; recebeu esta mensagem por engano, responda a esta mensagem e siga com sua exclus&atilde;o, para que possamos garantir que tal erro
+        n&atilde;o ocorra no futuro.</p>
+      </td>
+			</td>
 		</tr>
 	</table>
 </body>
