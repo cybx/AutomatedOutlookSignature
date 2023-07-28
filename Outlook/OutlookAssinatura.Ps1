@@ -72,33 +72,48 @@ background-color: white;'>
   font-size:small;
   color: #5e5e5e'>Endere&#231;o:</span> <span style='font-family: Verdana, Geneva, Tahoma, sans-serif;'>Av. Don Pedro II, 207, Centro <br>Assis Chateaubriand - PR (85935-000)</span></td></tr>
         </table>
-        <table>
+        <table border='0' cellpadding='0' cellspacing='0' style='line-height: 0px; font-size: 1px; padding: 0px !important; border-spacing: 0px; margin: 0px; border-collapse: collapse'>
+          <tbody>
           <tr>
-            <!-- <a href='https://wa.me/+5544997338394?text=Menu' rel='noreferrer noopener' target='_blank'> -->
-            <img style='padding-top: 3px; border: 0;' height='24' width='24' alt='whatsapp' src='https://statics.dc01.cybx.dev/lider/signature/whatsapp.png'/>
-          <!-- </a> -->
+            <td style='padding-right: 10px'>
+              <p style='margin: 0.04px'>
+                <a style='font-size: 0px; line-height: 0px' target='_blank' rel='nofollow' href='https://wa.me/+5544997338394?text=Menu'
+                  ><img height='24' width='24' alt='whatsapp' border='0' src='https://statics.dc01.cybx.dev/lider/signature/whatsapp.png'
+                /></a>
+              </p>
+            </td>
+            <td style='padding-right: 10px'>
+              <p style='margin: 0.04px'>
+                <a style='font-size: 0px; line-height: 0px' target='_blank' rel='nofollow' href='https://goo.gl/maps/QE9hADdec5HVe3Ff7'
+                  ><img height='24' width='24' alt='map' border='0' src='https://statics.dc01.cybx.dev/lider/signature/map.png'
+                /></a>
+              </p>
+            </td>
+            <td style='padding-right: 10px'>
+              <p style='margin: 0.04px'>
+                <a style='font-size: 0px; line-height: 0px' target='_blank' rel='nofollow' href='https://www.instagram.com/escritorio.lider/'
+                  ><img height='24' width='24' alt='instagram' border='0' src='https://statics.dc01.cybx.dev/lider/signature/instagram.png'
+                /></a>
+              </p>
+            </td>
+            <td style='padding-right: 10px'>
+              <p style='margin: 0.04px'>
+                <a style='font-size: 0px; line-height: 0px' target='_blank' rel='nofollow' href='https://www.youtube.com/@contabilidadelider'
+                  ><img height='24' width='24' alt='youtube' border='0' src='https://statics.dc01.cybx.dev/lider/signature/youtube.png'
+                /></a>
+              </p>
+            </td>
+            <td style='padding-right: 10px'>
+              <p style='margin: 0.04px'>
+                <a style='font-size: 0px; line-height: 0px' target='_blank' rel='nofollow' href='https://fb.me/contabilidadelidercom'
+                  ><img height='24' width='24' alt='facebook' border='0' src='https://statics.dc01.cybx.dev/lider/signature/facebook.png'
+                /></a>
+              </p>
+            </td>
+            <td style='padding: 0px !important'></td>
           </tr>
-            <tr>
-             <!--  <a href='https://goo.gl/maps/QE9hADdec5HVe3Ff7' rel='noreferrer noopener' target='_blank'> -->
-              <img style='padding-top: 3px; border: 0;' height='24' width='24' alt='map' src='https://statics.dc01.cybx.dev/lider/signature/map.png'/>
-           <!--  </a> -->
-            </tr>
-            <tr>
-               <!-- <a href='https://www.instagram.com/escritorio.lider/' rel='noreferrer noopener' target='_blank'>-->
-              <img style='padding-top: 3px; border: 0;' height='24' width='24' alt='instagram' src='https://statics.dc01.cybx.dev/lider/signature/instagram.png'/>
-             <!-- </a>-->
-            </tr>
-            <tr>
-            <!--    <a href='https://www.youtube.com/@contabilidadelider' rel='noreferrer noopener' target='_blank'>-->
-              <img style='padding-top: 3px; border: 0;' height='24' width='24' alt='youtube' src='https://statics.dc01.cybx.dev/lider/signature/youtube.png'/>
-           <!-- </a>-->
-            </tr>
-            <tr>
-             <!--   <a href='https://fb.me/contabilidadelidercom' rel='noreferrer noopener' target='_blank'>-->
-              <img style='padding-top: 3px; border: 0;' height='24' width='24' alt='facebook' src='https://statics.dc01.cybx.dev/lider/signature/facebook.png'/>
-           <!-- </a>-->
-            </tr>
-        </table>
+        </tbody>
+          </table>
         <p style='    font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: x-small;'>O conte&uacute;do deste e-mail &eacute; confidencial e destinado exclusivamente ao destinat&aacute;rio especificado apenas na mensagem. &Eacute; estritamente proibido compartilhar qualquer parte desta mensagem com
       terceiros, sem o consentimento por escrito do remetente. Se voc&ecirc; recebeu esta mensagem por engano, responda a esta mensagem e siga com sua exclus&atilde;o, para que possamos garantir que tal erro
