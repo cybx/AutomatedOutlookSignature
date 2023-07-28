@@ -26,211 +26,122 @@ if($user.title.count -gt 0){$jobTitle = $user.title[0]} # Job Title
 if($user.description.count -gt 0){$setormail = $user.description[0]} # Sector Mail
 if($user.initials.count -gt 0){$sector = $user.initials[0]} # Sector Name
 $signature = 
-"<br><br>
-<span>Atenciosamente,</span><br>
-<table
-  id='zs-output-sig'
-  cellpadding='0'
-  cellspacing='0'
-  style='
-  background-color: #FFFFFF;
-  border: 1px solid #88A5BF80;
-  color: #000000;
-  padding: 0.5em;
-  bottom: 4px;position: relative;right: 4px;
-    line-height: 0px;
-    font-size: 1px;
-    padding: 0px !important;
-    border-spacing: 0px;
-    background-color: white;
-    margin: 10px;
-    border-collapse: collapse;
-    width: 600px;
-    font-family: Trebuchet MS, Arial, sans-serif;
-  '>
-  <tbody>
-    <tr>
-      <td style='padding: 0px !important'>
-        <table
-          id='inner-table2'
-          border='0'
-          cellpadding='0'
-          cellspacing='0'
-          background-color: #ffffff;
-          style='line-height: 0px; font-size: 1px; padding: 0px !important; border-spacing: 0px; margin: 0px; border-collapse: collapse'>
-          <tbody>
-            <tr>
-              <td style='border-collapse: collapse; font-size: 15px; font-style: normal; line-height: 17px; font-weight: 400; padding-bottom: 14px'>
-                <p style='margin: 0.04px'>
-                  <span style='font-size: 15px; font-style: normal; line-height: 17px; font-weight: 400; color: #1a1a1a; display: inline'></span>
-                </p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <td style='padding: 0px !important'>
-        <table
-          id='inner-table'
-          border='0'
-          cellpadding='0'
-          cellspacing='0'
-          box-shadow:
-          rgba(136,165,191,0.48)
-          6px
-          2px
-          16px
-          0px,
-          rgba(255,255,255,0.8)
-          -6px
-          -2px
-          16px
-          0px;
-          style='line-height: 0px; font-size: 1px; padding: 0px !important; border-spacing: 0px; margin: 0px; border-collapse: collapse'>
-          <tbody>
-            <tr>
-              <td width='171' style='padding-right: 20px'>
-                <table border='0' cellpadding='0' cellspacing='0' style='line-height: 0px; font-size: 1px; padding: 0px !important; border-spacing: 0px; margin: 0px; border-collapse: collapse'>
-                  <tbody>
-                    <tr>
-                      <td style='border-collapse: collapse; line-height: 0px; padding-right: 1px'>
-                        <p style='margin: 5px'>
-                          <img alt='image' border='0' src='https://statics.dc01.cybx.dev/lider/signature/logo_redondo.png' />
-                        </p>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </td>
-              <td style='border-collapse: collapse; background-color: #07485c; width: 1px; vertical-align: super; padding: 0px !important'></td>
-              <td style='border-collapse: collapse; padding-right: 20px'></td>
-              <td style='padding: 0px !important'>
-                <table border='0' cellpadding='0' cellspacing='0' style='line-height: 0px; font-size: 1px; padding: 0px !important; border-spacing: 0px; margin: 0px; border-collapse: collapse'>
-                  <tbody>
-                    <tr>
-                      <td style='border-collapse: collapse; font-size: 17px; font-style: normal; line-height: 19px; font-weight: 700; padding: 0px !important'>
-                        <p style='margin-bottom: 1px'>
-                          <span style='font-size: 25px; font-style: normal; font-weight: 700; color: #b07f47; display: inline'>" + $(if($displayName){$displayName}) +"
-                        </p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p style='margin: 0.04px; margin-left: 5px'>
-                          <span style='font-style: oblique; font-size: small; line-height: 17px; color: #1a1a1a; display: inline; font-weight: bold'>" + $(if($jobTitle){$jobTitle}) +" - "+ $(if($sector){$sector})+ "</span>
-                        </p>
-                        <p style='margin: 0.04px'>
-                          <span style='font-size: 14px; font-style: normal; line-height: 17px; font-weight: bold; color: #074c61; display: inline'>E-mail: </span>
-                          <a style='text-decoration:none !important; text-decoration:none;' href='mailto:" + $(if($setormail){$setormail}) +"' target='_blank' rel='nofollow'><span style='font-size: 13px; font-style: normal; line-height: 17px; font-weight: 13px; color: #1a1a1a; display: inline'>" + $(if($setormail){$setormail}) +"</span><a></>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <table border='0' cellpadding='0' cellspacing='0' style='font-size: 1px; padding: 0px !important; border-spacing: 0px; margin: 0px; border-collapse: collapse; background-color: white'>
-                  <tbody>
-                    <tr>
-                      <td style='border-collapse: collapse; padding: 0px !important'>
-                        <p style='margin: 0.04px'>
-                          <span style='font-size: 14px; font-style: normal; line-height: 17px; font-weight: bold; color: #074c61; display: inline'>Telefone: </span>
-                          <a href='tel:044-3528-5291' style='text-decoration:none !important; text-decoration:none;' class='external'><span style='font-size: 13px; font-style: normal; line-height: 17px; font-weight: normal; color: #1a1a1a; display: inline'>(44) 3528-5291</span></a>
-                          <span style='font-size: 14px; font-style: normal; line-height: 17px; font-weight: bold; color: #074c61; display: inline'><br />WhatsApp: </span>
-                          <a href='https://wa.me/+5544997338394?text=Menu' style='text-decoration:none !important; text-decoration:none;' ><span style='font-size: 13; font-style: normal; line-height: 17px; font-weight: normal; color: #1a1a1a; display: inline'>(44) 99733-8394</span></a>
-                        </p>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <table border='0' cellpadding='0' cellspacing='0' style='line-height: 0px; font-size: 1px; padding: 0px !important; border-spacing: 0px; margin: 0px; border-collapse: collapse'>
-                  <tbody>
-                    <tr>
-                      <td style='border-collapse: collapse; font-size: 15px; font-style: normal; font-weight: 400; padding: 0px !important'>
-                        <p style='margin: 0.04px'>
-                          <span style='font-size: 14px; font-style: normal; line-height: 17px; font-weight: bold; color: #074c61; display: inline'>Site:</span>
-                          <a style='text-decoration:none !important; text-decoration:none;'  href='" + $(if($setormail){$setormail}) +"' target='_blank' rel='nofollow'><span style='font-size: 13px; font-style: normal; line-height: 17px; font-weight: 13px; color: #1a1a1a; display: inline'>www.contabilidadelider.com</span></a>
-                        </p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style='border-collapse: collapse; font-size: 15px; font-style: normal; font-weight: 400; padding-bottom: 14px'>
-                        <p style='margin: 0.04px'>
-                          <span style='font-size: 14px; font-style: normal; line-height: 17px; font-weight: bold; color: #074c61; display: inline'>Endereço:</span>
-                          <a href='https://goo.gl/maps/QE9hADdec5HVe3Ff7' style='text-decoration:none !important; text-decoration:none;' > <span style='font-size: 13px; font-style: normal; line-height: 17px; font-weight: normal; color: #1a1a1a; display: inline'
-                            >Av. Don Pedro II, 207, Centro<br />
-                            Assis Chateaubriand - PR</span
-                          ></a>
+"<head>
+<meta name='viewport' content='width=device-width, initial-scale=1.0' charset='UTF8'/>
+</head>
+<style>
+.principal {
+  margin-top: 5px;
+  min-width: 600px;
+  min-height: 200px;
+  max-width: 700px;
+  text-align: justify;
+  background-color: white;
+}
+.esq {
+  width: 180px;
+}
+.dir {
+  padding-left: 5px;
+}
+.linha {
+  width: 1px;
+  border-left: 1px solid #91734d;
+}
+.nome {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;    font-weight: bold;
+  font-size: medium;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #91734d
+  }
+.cargo {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: small;
+  padding-bottom: 15px;
+  color: #5e5e5e
+}
+.tipo {
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size:small;
+  color: #5e5e5e
+}
+.desc {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: smaller;
+}
+.logo {
+  width: 150px;
+}
+.icon {
+  padding-top: 3px;
+  width: 24px;
+  padding-right: 3px;
+}
+a {
+  text-decoration: none;
+}
+.txt {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: small;
+}
 
-                        </p>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <table border='0' cellpadding='0' cellspacing='0' style='line-height: 0px; font-size: 1px; padding: 0px !important; border-spacing: 0px; margin: 0px; border-collapse: collapse'>
-                <tbody>
-                <tr>
-                  <td style='padding-right: 10px'>
-                    <p style='margin: 0.04px'>
-                      <a style='font-size: 0px; line-height: 0px' target='_blank' rel='nofollow' href='https://wa.me/+5544997338394?text=Menu'
-                        ><img height='24' width='24' alt='whatsapp' border='0' src='https://statics.dc01.cybx.dev/lider/signature/whatsapp.png'
-                      /></a>
-                    </p>
-                  </td>
-                  <td style='padding-right: 10px'>
-                    <p style='margin: 0.04px'>
-                      <a style='font-size: 0px; line-height: 0px' target='_blank' rel='nofollow' href='https://goo.gl/maps/QE9hADdec5HVe3Ff7'
-                        ><img height='24' width='24' alt='map' border='0' src='https://statics.dc01.cybx.dev/lider/signature/map.png'
-                      /></a>
-                    </p>
-                  </td>
-                  <td style='padding-right: 10px'>
-                    <p style='margin: 0.04px'>
-                      <a style='font-size: 0px; line-height: 0px' target='_blank' rel='nofollow' href='https://www.instagram.com/escritorio.lider/'
-                        ><img height='24' width='24' alt='instagram' border='0' src='https://statics.dc01.cybx.dev/lider/signature/instagram.png'
-                      /></a>
-                    </p>
-                  </td>
-                  <td style='padding-right: 10px'>
-                    <p style='margin: 0.04px'>
-                      <a style='font-size: 0px; line-height: 0px' target='_blank' rel='nofollow' href='https://www.youtube.com/@contabilidadelider'
-                        ><img height='24' width='24' alt='instagram' border='0' src='https://statics.dc01.cybx.dev/lider/signature/youtube.png'
-                      /></a>
-                    </p>
-                  </td>
-                  <td style='padding-right: 10px'>
-                    <p style='margin: 0.04px'>
-                      <a style='font-size: 0px; line-height: 0px' target='_blank' rel='nofollow' href='https://fb.me/contabilidadelidercom'
-                        ><img height='24' width='24' alt='facebook' border='0' src='https://statics.dc01.cybx.dev/lider/signature/facebook.png'
-                      /></a>
-                    </p>
-                  </td>
-                  <td style='padding: 0px !important'></td>
-                </tr>
-              </tbody>
-                </table>
-              </td>
-            </tr>
-          </tbody>
+</style>
+<body>
+<br /><br />
+<span class='desc'>Atenciosamente,</span>
+<table class='principal'>
+  <tr>
+    <td class='esq'><img class='logo'alt='logo Escritorio Lider' src='https://statics.dc01.cybx.dev/lider/signature/logo_redondo.png' /></td>
+    <td class='linha'></td>
+    <td class='dir'>
+      <table>
+        <tr><td class='nome'>"+ $(if($displayName){$displayName}) +"</td></tr>
+        <tr><td class='cargo'>" + $(if($jobTitle){$jobTitle}) +" - "+ $(if($sector){$sector})+ "</td></tr>
+        <tr><td><span class='tipo'>E-mail:</span> <span class='desc'>" + $(if($setormail){$setormail}) +"</span></td></tr>
+        <tr><td><span class='tipo'>Telefone:</span> <span class='desc'>(44) 3528-5291</span></td></tr>
+        <tr><td><span class='tipo'>WhatsApp:</span> <span class='desc'>(44) 99949-3950</span></td></tr>
+        <tr><td><span class='tipo'>Endereço:</span> <span class='desc'>Av. Don Pedro II, 207, Centro <br>Assis Chateaubriand - PR (85935-000)</span></td></tr>
         </table>
-      </td>
-    </tr>
-    <tr>
-      <td style='border-collapse: collapse; padding-bottom: 16px'>
-        <span></span>
-      </td>
-    </tr>
-    <tr>
-      <td style='border-collapse: collapse'>
-        <p style='margin: 5px; font-size: 10px; font-style: normal; line-height: 10px; font-weight: normal; color: #777777'>
-            O conte&uacute;do deste e-mail &eacute; confidencial e destinado exclusivamente ao destinat&aacute;rio especificado apenas na mensagem. &Eacute; estritamente proibido compartilhar qualquer parte desta mensagem com
-        terceiros, sem o consentimento por escrito do remetente. Se voc&ecirc; recebeu esta mensagem por engano, responda a esta mensagem e siga com sua exclus&atilde;o, para que possamos garantir que tal erro
-        n&atilde;o ocorra no futuro.<br />
-          <p style='margin: 5px; font-size: 13px; text-align: center; font-style: normal; line-height: 14px; font-weight: normal; color: red'>Antes de imprimir pense no verde, apesar desta mensagem estar em vermelho e sua impressora ser preta e branca</p>
-        </p>
-      </td>
-    </tr>
-  </tbody>
-</table>"
+        <table>
+          <tr>
+            <a href='https://wa.me/+5544997338394?text=Menu' rel='noreferrer noopener' target='_blank'>
+            <img class='icon' alt='whatsapp' src='https://statics.dc01.cybx.dev/lider/signature/whatsapp.png'/>
+          </a>
+          </tr>
+            <tr>
+              <a href='https://goo.gl/maps/QE9hADdec5HVe3Ff7' rel='noreferrer noopener' target='_blank'>
+              <img class='icon' alt='map' src='https://statics.dc01.cybx.dev/lider/signature/map.png'/>
+            </a>
+            </tr>
+            <tr>
+              <a href='https://www.instagram.com/escritorio.lider/' rel='noreferrer noopener' target='_blank'>
+              <img class='icon' alt='instagram' src='https://statics.dc01.cybx.dev/lider/signature/instagram.png'/>
+            </a>
+            </tr>
+            <tr>
+              <a href='https://www.youtube.com/@contabilidadelider' rel='noreferrer noopener' target='_blank'>
+              <img class='icon' alt='instagram' src='https://statics.dc01.cybx.dev/lider/signature/youtube.png'/>
+            </a>
+            </tr>
+            <tr>
+              <a href='https://fb.me/contabilidadelidercom' rel='noreferrer noopener' target='_blank'>
+              <img class='icon' alt='instagram' src='https://statics.dc01.cybx.dev/lider/signature/facebook.png'/>
+            </a>
+            </tr>
+        </table>
+        <p class='txt'>O conte&uacute;do deste e-mail &eacute; confidencial e destinado exclusivamente ao destinat&aacute;rio especificado apenas na mensagem. &Eacute; estritamente proibido compartilhar qualquer parte desta mensagem com
+      terceiros, sem o consentimento por escrito do remetente. Se voc&ecirc; recebeu esta mensagem por engano, responda a esta mensagem e siga com sua exclus&atilde;o, para que possamos garantir que tal erro
+      n&atilde;o ocorra no futuro.</p>
+      <p class='txt' style='color: red'>Antes de imprimir pense no verde, apesar desta mensagem estar em vermelho e sua impressora ser preta e branca</p>
+    </td>
+    </td>
+  </tr>
+</table>
+</body>
+"
 try {
   $signature | Out-File -FilePath "$file.htm" -Encoding UTF8
 } catch {
