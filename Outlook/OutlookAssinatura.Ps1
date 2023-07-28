@@ -36,7 +36,7 @@ $signature =
 <table style='		margin-top: 5px;
 min-width: 600px;
 min-height: 200px;
-max-width: 700px;
+max-width: 80%;
 text-align: justify;
 background-color: white;'>
   <tr>
@@ -125,6 +125,7 @@ background-color: white;'>
   </tr>
 </table>
 </body>
+
 "
 try {
   $signature | Out-File -FilePath "$file.htm" -Encoding UTF8
