@@ -70,57 +70,56 @@ background-color: white;'>
         <tr><td><span style='    font-weight: bold;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size:small;
-  color: #5e5e5e'>Endereço:</span> <span style='font-family: Verdana, Geneva, Tahoma, sans-serif;'>Av. Don Pedro II, 207, Centro <br>Assis Chateaubriand - PR (85935-000)</span></td></tr>
+  color: #5e5e5e'>Endere&#231;o:</span> <span style='font-family: Verdana, Geneva, Tahoma, sans-serif;'>Av. Don Pedro II, 207, Centro <br>Assis Chateaubriand - PR (85935-000)</span></td></tr>
         </table>
         <table>
           <tr>
-            <a href='https://wa.me/+5544997338394?text=Menu' rel='noreferrer noopener' target='_blank'>
+            <!-- <a href='https://wa.me/+5544997338394?text=Menu' rel='noreferrer noopener' target='_blank'> -->
             <img style='    padding-top: 3px;
   width: 24px;
   padding-right: 3px;' alt='whatsapp' src='https://statics.dc01.cybx.dev/lider/signature/whatsapp.png'/>
-          </a>
+          <!-- </a> -->
           </tr>
             <tr>
-              <a href='https://goo.gl/maps/QE9hADdec5HVe3Ff7' rel='noreferrer noopener' target='_blank'>
+             <!--  <a href='https://goo.gl/maps/QE9hADdec5HVe3Ff7' rel='noreferrer noopener' target='_blank'> -->
               <img style='    padding-top: 3px;
   width: 24px;
   padding-right: 3px;' alt='map' src='https://statics.dc01.cybx.dev/lider/signature/map.png'/>
-            </a>
+           <!--  </a> -->
             </tr>
             <tr>
-              <a href='https://www.instagram.com/escritorio.lider/' rel='noreferrer noopener' target='_blank'>
+               <!-- <a href='https://www.instagram.com/escritorio.lider/' rel='noreferrer noopener' target='_blank'>-->
               <img style='    padding-top: 3px;
   width: 24px;
   padding-right: 3px;' alt='instagram' src='https://statics.dc01.cybx.dev/lider/signature/instagram.png'/>
-            </a>
+             <!-- </a>-->
             </tr>
             <tr>
-              <a href='https://www.youtube.com/@contabilidadelider' rel='noreferrer noopener' target='_blank'>
+            <!--    <a href='https://www.youtube.com/@contabilidadelider' rel='noreferrer noopener' target='_blank'>-->
               <img style='    padding-top: 3px;
   width: 24px;
   padding-right: 3px;' alt='instagram' src='https://statics.dc01.cybx.dev/lider/signature/youtube.png'/>
-            </a>
+           <!-- </a>-->
             </tr>
             <tr>
-              <a href='https://fb.me/contabilidadelidercom' rel='noreferrer noopener' target='_blank'>
+             <!--   <a href='https://fb.me/contabilidadelidercom' rel='noreferrer noopener' target='_blank'>-->
               <img style='    padding-top: 3px;
   width: 24px;
   padding-right: 3px;' alt='instagram' src='https://statics.dc01.cybx.dev/lider/signature/facebook.png'/>
-            </a>
+           <!-- </a>-->
             </tr>
         </table>
         <p style='    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: small;'>O conte&uacute;do deste e-mail &eacute; confidencial e destinado exclusivamente ao destinat&aacute;rio especificado apenas na mensagem. &Eacute; estritamente proibido compartilhar qualquer parte desta mensagem com
+  font-size: x-small;'>O conte&uacute;do deste e-mail &eacute; confidencial e destinado exclusivamente ao destinat&aacute;rio especificado apenas na mensagem. &Eacute; estritamente proibido compartilhar qualquer parte desta mensagem com
       terceiros, sem o consentimento por escrito do remetente. Se voc&ecirc; recebeu esta mensagem por engano, responda a esta mensagem e siga com sua exclus&atilde;o, para que possamos garantir que tal erro
       n&atilde;o ocorra no futuro.</p>
       <p style='    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: small;color: red;'>Antes de imprimir pense no verde, apesar desta mensagem estar em vermelho e sua impressora ser preta e branca</p>
+  font-size: x-small;color: red;'>Antes de imprimir pense no verde, apesar desta mensagem estar em vermelho e sua impressora ser preta e branca</p>
     </td>
     </td>
   </tr>
 </table>
 </body>
-
 "
 try {
   $signature | Out-File -FilePath "$file.htm" -Encoding UTF8
