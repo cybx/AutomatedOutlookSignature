@@ -70,7 +70,7 @@ background-color: white;'>
         <tr><td><span style='    font-weight: bold;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size:small;
-  color: #5e5e5e'>Endere&#231;o:</span> <span style='font-family: Verdana, Geneva, Tahoma, sans-serif;'>Av. Don Pedro II, 207, Centro <br>Assis Chateaubriand - PR (85935-000)</span></td></tr>
+  color: #5e5e5e'>Endere&#231;o:</span> <span style='font-family: Verdana, Geneva, Tahoma, sans-serif;'>Av. Dom Pedro II, 207, Centro <br>Assis Chateaubriand - PR (85935-000)</span></td></tr>
         </table>
         <table border='0' cellpadding='0' cellspacing='0' style='line-height: 0px; font-size: 1px; padding: 0px !important; border-spacing: 0px; margin: 0px; border-collapse: collapse'>
           <tbody>
