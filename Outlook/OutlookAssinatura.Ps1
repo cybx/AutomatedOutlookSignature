@@ -11,6 +11,16 @@ $folderLocation = Join-Path -Path $Env:appdata -ChildPath 'Microsoft\signatures'
 $filename = 'Signature'
 $file  = Join-Path -Path $folderLocation -ChildPath $filename
 
+#Remove everything from folder
+if (Test-Path -Path $folderLocation) {
+  try {
+      Remove-Item -Path "$folderLocation\*" -Recurse -Force
+  } catch {
+      Write-Host "Error: Unable to Remove Folder: $($_.Exception.Message)"
+      exit
+  }
+}
+
 # If the folder does not exist create it
 if (-not (Test-Path -Path $folderLocation)) {
   try {
