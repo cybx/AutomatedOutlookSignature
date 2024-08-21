@@ -76,7 +76,7 @@ background-color: white;'>
         <tr><td><span style='    font-weight: bold;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size:small;
-  color: #5e5e5e'>WhatsApp:</span> <span style='font-family: Verdana, Geneva, Tahoma, sans-serif;'>(44) 99949-3950</span></td></tr>
+  color: #5e5e5e'>WhatsApp:</span> <span style='font-family: Verdana, Geneva, Tahoma, sans-serif;'>(44) 3528-5291</span></td></tr>
         <tr><td><span style='    font-weight: bold;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size:small;
@@ -87,7 +87,7 @@ background-color: white;'>
           <tr>
             <td style='padding-right: 10px'>
               <p style='margin: 0.04px'>
-                <a style='font-size: 0px; line-height: 0px' target='_blank' rel='nofollow' href='https://wa.me/+5544997338394?text=Menu'
+                <a style='font-size: 0px; line-height: 0px' target='_blank' rel='nofollow' href='https://wa.me/+554435285291?text=Menu'
                   ><img height='24' width='24' alt='whatsapp' border='0' src='https://statics.dc01.cybx.dev/lider/signature/whatsapp.png'
                 /></a>
               </p>
